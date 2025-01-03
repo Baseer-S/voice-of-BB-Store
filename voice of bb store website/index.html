@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice of BB Store</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --primary-bg: #232f3e; /* Amazon dark blue */
+      --secondary-bg: #37475a; /* Slightly lighter blue */
+      --accent-color: #ff9900; /* Amazon orange */
+      --text-color: #ffffff;
+      --card-bg: #ffffff;
+      --card-text: #333333;
+      --button-bg: #ff9900;
+      --button-text: #ffffff;
+      --button-hover-bg: #e68a00;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: var(--primary-bg);
+      color: var(--text-color);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: var(--secondary-bg);
+      padding: 20px;
+      color: var(--text-color);
+      display: flex;
+      justify-content: space-between;
+      text-align: center; 
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: var(--accent-color);
+    }
+
+    .hero {
+      text-align: center;
+      background-color: var(--accent-color);
+      color: var(--text-color);
+      padding: 50px 15px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+
+    .cta-button {
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .cta-button:hover {
+      background-color: var(--button-hover-bg);
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .product-card {
+      background-color: var(--card-bg);
+      color: var(--card-text);
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      text-align: center;
+      width: 250px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .buy-now {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .buy-now:hover {
+      background-color: var(--button-hover-bg);
+    }
+
+    footer {
+      background-color: var(--secondary-bg);
+      color: var(--text-color);
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    
+/* Contact Form */
+.contact {
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact form {
+    display: flex;
+    width: 600px;
+    flex-direction: column;
+}
+
+.contact label {
+    color: #333333;
+    margin: 10px 0 5px;
+}
+.contact h2{
+    color: #000;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact button {
+    background-color: #0055ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Reset any conflicting styles for the submit button */
+#contact-form button {
+    display: inline-block !important;  /* Ensure it's visible */
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Optional: Hover effect */
+#contact-form button:hover {
+    background-color: #0056b3;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <center>
+    <div class="container">
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <img src="assets/channel_logo.png" alt="Voice of BB Logo" style="height: 80px;"> <!-- Replace with actual logo file path -->
+        <h1>Voice of BB Store</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="dark-mode-toggle">🌙 Dark Mode</button>
+    </div>
+</center>
+  </header>
+
+  <section id="home">
+    <div class="hero">
+      <h2>Your Gateway to Exclusive Deals</h2>
+      <p>Discover handpicked products with amazing discounts and offers.</p>
+      <a href="#products" class="cta-button">Shop Now</a>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2 style="text-align: center; color: var(--accent-color);">Top Trending Products</h2>
+    <div class="product-grid">
+      <!-- Template for 20 product cards -->
+      <div class="product-card">
+        <img src="assets/product/product1.jpg" alt="Product 1">
+        <h3>MOROVIK Spider Web Shooters Toy for Kids Fans (Spider Webs) </h3>
+        <p>₹287 </p>
+        <a href="https://amzn.in/d/0pS6FXj" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="assets/product/product2.jpg" alt="Product 2">
+        <h3>Classmate Soft Cover 5 Subject Spiral Binding Notebook, Single Line, 250 Pages </h3>
+        <p>
+          ₹131</p>
+        <a href="https://amzn.in/d/314Swp5" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="assets/product/product3.jpg" alt="Product 1">
+        <h3>Captain america Shield for Home Decor/Wall Decor Shield Gifted Items for War Lover </h3>
+        <p>
+          ₹3,299
+         </p>
+        <a href="https://amzn.in/d/4iqat1s" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Title 4</h3>
+        <p>Short product description here.</p>
+        <a href="#" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Title 5</h3>
+        <p>Short product description here.</p>
+        <a href="#" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Title 6</h3>
+        <p>Short product description here.</p>
+        <a href="#" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Title 7</h3>
+        <p>Short product description here.</p>
+        <a href="#" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Title 8</h3>
+        <p>Short product description here.</p>
+        <a href="#" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Title 9</h3>
+        <p>Short product description here.</p>
+        <a href="#" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Title 10</h3>
+        <p>Short product description here.</p>
+        <a href="#" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Title 11</h3>
+        <p>Short product description here.</p>
+        <a href="#" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Title 12</h3>
+        <p>Short product description here.</p>
+        <a href="#" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Title 13</h3>
+        <p>Short product description here.</p>
+        <a href="#" target="_blank" class="buy-now">Buy Now</a>
+      </div> <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Title 14</h3>
+        <p>Short product description here.</p>
+        <a href="#" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Title 15</h3>
+        <p>Short product description here.</p>
+        <a href="#" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Title 16</h3>
+        <p>Short product description here.</p>
+        <a href="#" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Title 17</h3>
+        <p>Short product description here.</p>
+        <a href="#" target="_blank" class="buy-now">Buy Now</a>
+      </div> <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Title 18</h3>
+        <p>Short product description here.</p>
+        <a href="#" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Title 19</h3>
+        <p>Short product description here.</p>
+        <a href="#" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+      <div class="product-card">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product Title 20</h3>
+        <p>Short product description here.</p>
+        <a href="#" target="_blank" class="buy-now">Buy Now</a>
+      </div>
+
+      <!-- Repeat the above template for the remaining 18 products -->
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 style="text-align: center; color: var(--accent-color);">About Us</h2>
+    <p style="text-align: center;">Welcome to Voice of BB Store, your trusted platform for discovering quality products curated with care.</p>
+  </section>
+  
+ <section class="contact">
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <!-- The button should now be visible -->
+        <button type="submit">Submit</button>
+    </form>
+</section>
+</section>
+
+  <footer>
+    <p>&copy; 2025 Voice of BB Store | All Rights Reserved</p>
+  </footer>
+  <script src="server.js"></script>
+</body>
+</html>
