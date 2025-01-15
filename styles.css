@@ -1,0 +1,229 @@
+:root {
+  --primary-bg: #232f3e;
+  --secondary-bg: #37475a;
+  --accent-color: #ff9900;
+  --text-color: #ffffff;
+  --card-bg: #ffffff;
+  --card-text: #333333;
+  --button-bg: #ff9900;
+  --button-text: #ffffff;
+  --button-hover-bg: #e68a00;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--primary-bg);
+  font-size: 14px;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  background-color: var(--secondary-bg);
+  padding: 20px;
+  color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+.hero {
+  text-align: center;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  padding: 20px 10px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+}
+
+.hero p {
+  font-size: 1rem;
+}
+
+.section-title {
+  font-size: 2.5rem; /* Slightly larger font */
+  color: var(--accent-color); /* Highlight with accent color */
+  text-align: center;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px; /* Add padding around the text */
+  background-color: var(--secondary-bg); /* Add a subtle background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow for effect */
+  border: 2px solid #ffffff; /* Add white border */
+}
+
+.buy-now {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.buy-now:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.cta-button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.cta-button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+/* Product Grid */
+#products,
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns on desktop */
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.product-card {
+  max-width: 360px; /* Increased from 300px to 360px (20% larger) */
+  background-color: var(--card-bg);
+  color: var(--card-text);
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.product-card img,
+.category-image {
+  max-width: 110%; /* Increased size by 20% */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 220px; /* Increased from 200px to 240px */
+  object-fit: cover; /* Ensure images fill the container neatly */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.product-card img:hover,
+.category-image:hover {
+  transform: scale(1.1); /* Add zoom effect on hover */
+}
+
+/* Responsive Grid for Tablets */
+@media (max-width: 768px) {
+  #products,
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+/* Responsive Grid for Mobile */
+@media (max-width: 480px) {
+  #products,
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
+  text-align: center;
+  padding: 15px 0;
+}
+
+/* Dark Mode */
+.dark-mode {
+  --primary-bg: black;
+  --secondary-bg: #333;
+  --accent-color: #555;
+  --text-color: #ddd;
+  --card-bg: #444;
+  --card-text: #ddd;
+  --button-bg: #777;
+  --button-hover-bg: #666;
+}
+
+.darkmode-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  background-color: var(--button-bg);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.darkmode-btn:hover {
+  opacity: 0.9;
+}
+
+/* Contact Section */
+.contact {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333333;
+}
+
+.contact button {
+  background-color: #0055ff;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: #003eb3;
+}
